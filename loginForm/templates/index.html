@@ -1,0 +1,12 @@
+{% block content %}
+    {% if user.is_authenticated %}
+            <h2>Hey Syed Taher, {{user.username}}!</h2>
+            <a href="{%url 'logout'%}">Log out</a>
+
+
+        {%else%}
+            <h2>you are not logged in!</h2>
+
+        <a href="{%url 'login'%}">Log in</a>
+    {%endif%}
+{% endblock %}
